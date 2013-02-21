@@ -1,0 +1,15 @@
+<h1>Erste Versuche mit erb</h1>
+<p>Addition:
+<%= 1 + 1 %>
+</p>
+<p>Schleife von 0 bis 5:
+<% (0..5).each do |i| %>
+<%= "#{i}, " %>
+<% end %>
+</p>
+<p>
+Die aktuelle Uhrzeit ist 
+<%= @current_time %>
+</p>
+
+<%= render "shared/footer" , :start_year => 2013 %>
