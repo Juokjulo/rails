@@ -1,3 +1,16 @@
+
+
+<div id="user_nav">
+	  <% if user_signed_in? %>
+		      Signed in as <%= current_user.email %>. Not you?
+		          <%= link_to "Abmelden", destroy_user_session_path, :method => :delete %>
+			    <% else %>
+				    <%= link_to "Anmelden", new_user_session_path %>
+					  <% end %>
+				  </div>
+
+
+
 <h1>Erste Versuche mit erb</h1>
 <p>Addition:
 <%= 1 + 1 %>
@@ -11,5 +24,5 @@
 Die aktuelle Uhrzeit ist 
 <%= @current_time %>
 </p>
-
+<a href="blubber" class="btn">blubber</a>
 <%= render "shared/footer" , :start_year => 2013 %>

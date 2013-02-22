@@ -1,0 +1,17 @@
+<ul class="nav pull-left">
+  <% if user_signed_in? %>
+    <li class="divider-vertical"></li>
+    <li><%= link_to "Links", root_url, :title => "Links"%></li>
+    <li><%= link_to "Foo", root_url, :target => "_parent", :title => "Foo"%></li>
+    <li><%= link_to "Bar", root_url, :target => "_parent", :title => "Bar"%></li>
+  <% end %>
+</ul>
+
+<ul class="nav pull-right">
+  <% if user_signed_in? %>
+    <li>Signed in as <%= current_user.email %>.</li>
+    <li> <%= link_to "Abmelden", destroy_user_session_path, :method => :delete %> </li>
+  <% else %>
+    <li> <%= link_to "Anmelden", new_user_session_path %> </li>
+  <% end %>
+</ul> 
