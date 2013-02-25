@@ -1,28 +1,39 @@
+    <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+    <div class="active item"> <%=image_tag("SVM.jpg") %>
+    </div>
+    <div class="item">
+      <%=image_tag("LOGO SWM2.png") %>
+    </div>
+    <div class="item">
+      <%=image_tag("LOGO SWM.jpg") %>
+    </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
 
+  <h1>Erste Versuche mit erb</h1>
+  <p>Addition:
+  <%= 1 + 1 %>
+  </p>
+  <p>Schleife von 0 bis 5:
+  <% (0..5).each do |i| %>
+  <%= "#{i}, " %>
+  <% end %>
+  </p>
+  <p>
+  Die aktuelle Uhrzeit ist 
+  <%= @current_time %>
+  </p>
+  <a href="blubber" class="btn">blubber</a>
+  <%= render "shared/footer" , :start_year => 2013 %>
 
-<div id="user_nav">
-	  <% if user_signed_in? %>
-		      Signed in as <%= current_user.email %>. Not you?
-		          <%= link_to "Abmelden", destroy_user_session_path, :method => :delete %>
-			    <% else %>
-				    <%= link_to "Anmelden", new_user_session_path %>
-					  <% end %>
-				  </div>
-
-
-
-<h1>Erste Versuche mit erb</h1>
-<p>Addition:
-<%= 1 + 1 %>
-</p>
-<p>Schleife von 0 bis 5:
-<% (0..5).each do |i| %>
-<%= "#{i}, " %>
-<% end %>
-</p>
-<p>
-Die aktuelle Uhrzeit ist 
-<%= @current_time %>
-</p>
-<a href="blubber" class="btn">blubber</a>
-<%= render "shared/footer" , :start_year => 2013 %>
+</div>
